@@ -1,26 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
-  margin: 0px;
-  padding: 0px;
+* {
+  margin: 0;
+  padding: 0;
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: aliceblue;
 }
 
-.password-generator{
- max-width: 400px;
- background-color: #fff;
- margin:50px auto;
- padding: 20px;
- border-radius: 8px;
- box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+/* Container for the Password Generator */
+.password-generator {
+  max-width: 400px;
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.password-generator h2{
+/* Header */
+.password-generator h2 {
   margin-bottom: 20px;
   text-align: center;
   color: #007bff;
@@ -28,28 +30,32 @@ body{
   font-size: 20px;
   text-transform: uppercase;
 }
+
+/* Input Groups */
 .input-group,
 .checkbox-group,
-.generate-pwd{
+.generate-pwd {
   margin-bottom: 15px;
 }
 
-.checkbox-group{
+/* Checkbox Styling */
+.checkbox-group {
   display: flex;
   align-items: center;
 }
 
-.checkbox-group input{
+.checkbox-group input {
   margin-right: 15px;
 }
 
-.input-group label{
+.input-group label {
   display: block;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-input[type="number"]{
+/* Number Input Styling */
+input[type="number"] {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -57,7 +63,8 @@ input[type="number"]{
   outline: none;
 }
 
-.generate-btn{
+/* Generate Button */
+.generate-btn {
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
@@ -66,28 +73,90 @@ input[type="number"]{
   cursor: pointer;
 }
 
-.generate-btn:hover{
+.generate-btn:hover {
   background-color: #0056b3;
 }
 
-.generate-pwd{
+/* Password Display */
+.generate-pwd {
   margin-top: 10px;
-  display:flex ;
+  display: flex;
   border: 1px solid #ccc;
   border-radius: 4px;
   overflow: hidden;
 }
 
-input[type="text"]{
+input[type="text"] {
   border: none;
   outline: none;
   flex: 1;
   padding: 10px;
-  }
+}
 
- .copy-btn {
+/* Copy Button */
+.copy-btn {
   border: none;
   padding: 5px;
   background-color: green;
   color: #fff;
- }
+  cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .password-generator {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .password-generator h2 {
+    font-size: 18px;
+  }
+
+  input[type="number"] {
+    padding: 8px;
+  }
+
+  .generate-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  input[type="text"] {
+    padding: 8px;
+  }
+
+  .copy-btn {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .password-generator {
+    max-width: 95%;
+    margin: 15px auto;
+    padding: 10px;
+  }
+
+  .password-generator h2 {
+    font-size: 16px;
+  }
+
+  input[type="number"] {
+    padding: 6px;
+  }
+
+  .generate-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  input[type="text"] {
+    padding: 6px;
+  }
+
+  .copy-btn {
+    padding: 6px;
+  }
+}
